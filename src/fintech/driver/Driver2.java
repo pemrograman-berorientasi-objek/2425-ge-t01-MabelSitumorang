@@ -10,15 +10,16 @@ public class Driver2 {
 
     public static void main(String[] _args) {
         Scanner sc = new Scanner(System.in);
+        int id = 0;
         String Command = sc.nextLine();
         String owner = sc.nextLine();
         String accountname2 = sc.nextLine();
         String Command2 = sc.nextLine();
         String accountname = sc.nextLine();
-        Double amount = sc.nextDouble();
+        String amount = sc.nextLine();
         String timestamp = sc.nextLine();
         String note = sc.nextLine();
-        Transaction done = new Transaction(accountname, amount, timestamp, note);
+        Transaction done = new Transaction(id, accountname, amount, note, timestamp);
         System.out.println(done.output());
         sc.close();
     }

@@ -7,25 +7,27 @@ package fintech.model;
 public class Transaction {
     private Integer id;
     private String accountname;
-    private Double amount;
+    private String amount;
     private String timestamp;
     private String note;
     private Double balance;
+    private String str;
 
     public Transaction() {
         this.id = 0;
         this.accountname = "";
-        this.amount = 0.0;
         this.timestamp = "";
         this.note = "";
         this.balance = 0.0;
     }
 
-    public Transaction(String _accountname, Double _amount, String _timestamp, String _note) {
+    public Transaction(int id, String _accountname, String _amount, String _timestamp, String _note) {
+        this.id = id++;
         this.accountname = _accountname;
         this.amount = _amount;
         this.timestamp = _timestamp;
         this.note = _note;
+
     }
 
     public Integer getId() {
@@ -36,7 +38,7 @@ public class Transaction {
         return accountname;
     }
 
-    public Double getAmount() {
+    public String getAmount() {
         return amount;
     }
 
@@ -54,7 +56,7 @@ public class Transaction {
 
     // @Override
     public String output() {
-        return (id++) + accountname + "|" + amount + "|" + timestamp + "|" + note + "|" + (this.balance + amount);
+        return "1" + "|" + accountname + "|" + amount+ "|" + timestamp + "|" + note + "|" + amount;
     }
 }
 
