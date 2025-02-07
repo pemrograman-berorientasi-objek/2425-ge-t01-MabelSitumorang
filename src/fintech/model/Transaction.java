@@ -56,7 +56,7 @@ public class Transaction {
 
     // @Override
     public String output() {
-        return "1" + "|" + accountname + "|" + amount+ "|" + timestamp + "|" + amount + "|" + note;
+        return "1" + "|" + accountname + "|" + amount+ "|" + timestamp + "|" + note + "|" + amount;
     }
 }
 

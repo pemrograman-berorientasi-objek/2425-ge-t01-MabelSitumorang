@@ -10,10 +10,17 @@ public class Driver2 {
 
     public static void main(String[] _args) {
         Scanner sc = new Scanner(System.in);
-        int id = 0;
         String Command = sc.nextLine();
-        String owner = sc.nextLine();
-        String accountname2 = sc.nextLine();
+
+        if (Command.equals("create-account")) {
+            String owner = sc.nextLine();
+            String accountname = sc.nextLine();
+            Account acc = new Account(owner, accountname, 0);
+            System.out.println(acc.toString());
+        } 
+
+
+        int id = 0;
         String Command2 = sc.nextLine();
         String accountname = sc.nextLine();
         String amount = sc.nextLine();
